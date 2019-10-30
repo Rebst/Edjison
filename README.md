@@ -1,6 +1,6 @@
 # Edjison
 
-A simple package to modify json files
+A simple NodeJs package to modify json files
 
 [![version](https://img.shields.io/npm/v/edjison)](https://www.npmjs.com/package/edjison)
 [![license](https://img.shields.io/npm/l/edjison)](https://github.com/Rebst/Edjison/blob/master/LICENSE)
