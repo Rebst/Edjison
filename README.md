@@ -158,3 +158,7 @@ file.deleteAll((err) => {
 ```
 
 The `callback` is given the one argument, `(err)`. The `callback` is optional
+
+## License
+
+MIT © [Rebst](https://github.com/Rebst)
