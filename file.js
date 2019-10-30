@@ -54,13 +54,13 @@ module.exports = (opts) => {
             }
         }
     
-        module.remove = (obj, callback = null) => {
+        module.remove = (keys, callback = null) => {
             if(opts.sync) {
                 fs.readFileSync(opts.path, opts.encoding, (err, data) => {
                     if(err) callback(err)
                     var json = JSON.parse(data)
-                    Object.keys(obj).forEach((key) => {
-                       delete json[key]
+                    keys.forEach((key) => {
+                        delete json[key]
                     })
                     fs.writeFileSync(opts.path, JSON.stringify(json), opts.encoding, (err) => {
                         if(err) callback(err)
@@ -70,8 +70,8 @@ module.exports = (opts) => {
                 fs.readFile(opts.path, opts.encoding, (err, data) => {
                     if(err) callback(err)
                     var json = JSON.parse(data)
-                    Object.keys(obj).forEach((key) => {
-                       delete json[key]
+                    keys.forEach((key) => {
+                        delete json[key]
                     })
                     fs.writeFile(opts.path, JSON.stringify(json), opts.encoding, (err) => {
                         if(err) callback(err)

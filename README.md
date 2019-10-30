@@ -125,20 +125,20 @@ The `callback` is given the one argument, `(err)`. The `callback` is optional
 
 ___
 
-### file.remove(obj, callback)
+### file.remove(keys, callback)
 
 This function allows you to delete data
 
 ```javascript
-file.remove({ country: 'FR' }, (err) => {
+file.remove(['country', 'email'], (err) => {
     if(err) throw err
 })
 ```
 
-##### obj
-Type : `Object`
+##### keys
+Type : `Array`
 
-The data to be deleted from the file
+The keys to be deleted
 
 ##### callback
 Type : `function`
