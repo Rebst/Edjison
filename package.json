@@ -1,6 +1,6 @@
 {
   "name": "edjison",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple package to modify json files",
   "main": "index.js",
   "keywords": [

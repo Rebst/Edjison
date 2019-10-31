@@ -11,7 +11,7 @@ A simple NodeJs package to modify json files
 const edjison = require('edjison')
 
 const file = edjison.import({
-    path: '/dir/file.json',
+    path: '../file.json',
     encoding: 'utf8'
 })
 

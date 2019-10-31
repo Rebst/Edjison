@@ -1,4 +1,5 @@
 const file = require('./file')
+const path = require('path')
 
 var settings = {
     path: '',
@@ -7,5 +8,7 @@ var settings = {
 }
 
 module.exports.import = (options = settings) => {
-    return file(Object.assign(settings, options))
+    var params = Object.assign(settings, options)
+    params.path = path.join(arguments[1].main.path, params.path)
+    return file(params)
 }
